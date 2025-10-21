@@ -17,6 +17,8 @@ console.log("Name:",user.name)
 console.log("Email:",user.email)
 console.log("Active",user.isActive)
 
+console.log("-----------------------");
+
 // === Type Alias: Membuat tipe khusus ===
 type Status = 'active' | 'inactive' | 'pending';
 // Gunakan type alias
@@ -24,6 +26,8 @@ let status: Status = 'active';
 console.log("Status:", status);
 // Coba set nilai salah → akan error!
 // status = 'unknown'; // Error: Type 'unknown' is not assignable to type 'Status'
+console.log("-----------------------");
+
 
 // === Class: Template untuk objek ===
 class Task {
@@ -50,13 +54,17 @@ console.log("Tugas:", task1.toString());
 // Ubah status
 task1.toggle();
 console.log("Tugas setelah toggle:", task1.toString());
+console.log("-----------------------");
 
 // === Gunakan Interface untuk Array ===
 interface TaskData {
     id: number;
     title: string;
     isCompleted: boolean;
+
+
 }
+console.log("-----------------------");
 // Simpan tugas dalam array
 const tasks: TaskData[] = [
     { id: 1, title: "Belajar Angular", isCompleted: false },
@@ -64,3 +72,4 @@ const tasks: TaskData[] = [
 ];
 console.log("Daftar Tugas:");
 tasks.forEach(t => console.log(`- ${t.title} (${t.isCompleted ? '✓' : '○'})`));
+
